@@ -1,1 +1,2 @@
 hello
+print(1)
