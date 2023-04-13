@@ -35,4 +35,4 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 
-for pattern in urlpatterns: print(pattern)
+# for pattern in urlpatterns: print(pattern)
