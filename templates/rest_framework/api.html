@@ -1,0 +1,18 @@
+{% extends "rest_framework/base.html" %}
+{% load static %}
+
+{% block title %}REST Sandbox{% endblock title %}
+
+{% block bootstrap_theme %}
+    <link href="{% static 'bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block bootstrap_navbar_variant %}navbar bg-light{% endblock %}
+
+{% block branding %}
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">REST Sandbox</span>
+        </div>
+    </nav>
+{% endblock branding %}
