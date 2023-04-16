@@ -25,8 +25,11 @@ class Snippet(models.Model):
     
     def save(self, *args, **kwargs):
         lexer = get_lexer_by_name(self.language) # python
+
         linenos = 'table' if self.linenos else False
         options = {'title': self.title} if self.title else {}
         formatter = HtmlFormatter(style = self.style, linenos = linenos, full = True, **options)
+        
         self.highlighted = highlight(self.code, lexer, formatter)
+
         super().save(*args, **kwargs)
