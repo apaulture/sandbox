@@ -1,7 +1,6 @@
-# Serializers are used to represent data
-
 from .models import Snippet, LANGUAGE_CHOICES, STYLE_CHOICES
 from rest_framework import serializers
+
 from django.contrib.auth.models import User
 
 class SnippetSerializer(serializers.ModelSerializer):
